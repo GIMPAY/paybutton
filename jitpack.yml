@@ -1,0 +1,11 @@
+jdk:
+  - openjdk17
+  - openjdk-17
+# Configuration file for building snapshots and releases with jitpack.io
+
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+
+install:
+  - FILE="-Dfile=paybutton.aar"
+  - mvn install:install-file $FILE -DgroupId=com.github.payskyCompany  -DartifactId=paybutton-sdk -Dversion=4.0.0 -Dpackaging=aar -DgeneratePom=true

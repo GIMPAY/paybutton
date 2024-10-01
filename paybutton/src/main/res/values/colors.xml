@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#e0e0e0</color>
+
+    <color name="paybutton_app_background">#f3f3f3</color>
+    <color name="backgroundColorDark">#f1f2f3</color>
+    <color name="font_gray_color2">#878d91</color>
+    <color name="font_gray_color3">#2D3134</color>
+    <color name="primary_color">#203471</color>
+    <color name="accentColor">@color/primary_color</color>
+    <color name="secondary_color">#F79E3B</color>
+
+    <color name="gray100">#C7C8C8</color>
+    <color name="gray200">#CAC4D0</color>
+
+    <color name="black100">#222222</color>
+    <color name="red100">#DEFB4949</color>
+    <color name="black">#000000</color>
+</resources>

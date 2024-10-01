@@ -1,0 +1,2 @@
+include ':app', ':paybutton'
+include ':cardNfc'
