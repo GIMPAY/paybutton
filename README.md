@@ -28,7 +28,7 @@ maven { url 'https://jitpack.io' }
 ```
 3. In your build.gradle file in app level in dependencies{} add
 ```
-implementation 'com.github.GIMPAY:paybutton-sdk-android:2.0.14'
+implementation 'com.github.gimpay:paybutton-sdk-android:2.0.14'
 ```
 4. Sync your project.
 
