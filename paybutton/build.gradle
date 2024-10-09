@@ -5,7 +5,7 @@ plugins{
     id 'kotlin-parcelize'
 }
 
-group = 'com.github.payskyCompany'
+group = 'com.github.gimpay'
 
 android {
     compileSdk 34
@@ -94,11 +94,11 @@ dependencies {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'com.github.payskyCompany'
+            groupId = 'com.github.gimpay'
             artifactId = 'paybutton-sdk'
-            version = "4.0.0"
+            version = "1.0.0"
             pom {
-                description = 'fixed bug'
+                description = 'initial release'
             }
         }
     }
