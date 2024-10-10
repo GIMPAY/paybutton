@@ -7,14 +7,12 @@
 
 
     <application
-        android:theme="@style/AppTheme"
         android:name="androidx.multidex.MultiDexApplication">
         <activity
-
             android:name="io.paysky.ui.activity.payment.PaymentActivity"
             android:screenOrientation="portrait"
             android:exported="false"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/PayButtonAppTheme" >
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
 
