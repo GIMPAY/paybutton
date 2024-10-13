@@ -1,4 +1,4 @@
-plugins{
+plugins {
     id 'com.android.library'
     id 'maven-publish'
     id 'org.jetbrains.kotlin.android'
@@ -10,7 +10,7 @@ group = 'com.github.gimpay'
 android {
     compileSdk 34
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdk 34
         // Enabling multidex support.
         multiDexEnabled true
@@ -41,13 +41,21 @@ android {
     }
 
     namespace 'com.example.paybutton'
-}
 
+    publishing {
+        publishing {
+            singleVariant("release") {
+                withSourcesJar()
+                withJavadocJar()
+            }
+        }
+    }
+}
 
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'org.greenrobot:eventbus:3.3.1'
     implementation 'com.jakewharton.timber:timber:5.0.1'
@@ -91,42 +99,15 @@ dependencies {
     implementation 'commons-io:commons-io:2.13.0'
 }
 
-publishing {
-    publications {
-        maven(MavenPublication) {
-            groupId = 'com.github.GIMPAY'
-            artifactId = 'paybutton-sdk'
-            version = "1.0.1"
-            pom {
-                description = 'initial release'
+afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.gimpay'
+                artifactId = 'paybutton'
+                version = '0.0.7'
             }
         }
-    }
-    repositories {
-        mavenLocal()
-    }
-}
-tasks.withType(PublishToMavenRepository).configureEach { task ->
-    def predicate = provider {
-        def externalRepo = publishing.repositories.findByName('external')
-        def internalRepo = publishing.repositories.findByName('internal')
-        def binaryPublication = publishing.publications.findByName('binary')
-        def binaryAndSourcesPublication = publishing.publications.findByName('binaryAndSources')
-
-        (task.repository == externalRepo && task.publication == binaryPublication) ||
-                (task.repository == internalRepo && task.publication == binaryAndSourcesPublication)
-    }
-    onlyIf {
-        predicate.getOrElse(false)
-    }
-}
-
-tasks.withType(PublishToMavenLocal).configureEach { task ->
-    def predicate = provider {
-        def binaryAndSourcesPublication = publishing.publications.findByName('binaryAndSources')
-        task.publication == binaryAndSourcesPublication
-    }
-    onlyIf {
-        predicate.getOrElse(false)
     }
 }
