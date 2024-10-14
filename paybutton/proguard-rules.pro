@@ -19,3 +19,9 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Keep the resources from sdp-android and ssp-android libraries
+-keep class com.intuit.sdp.** { *; }
+-keep class com.intuit.ssp.** { *; }
+-keepresourcefiles res/dimen/*sdp.xml
+-keepresourcefiles res/dimen/*ssp.xml
