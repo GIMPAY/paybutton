@@ -61,7 +61,7 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.pnikosis:materialish-progress:1.7'
     implementation 'commons-codec:commons-codec:1.15'
-    implementation 'com.github.prashantsolanki3:Secure-Pref-Manager:0.25'
+    //implementation 'com.github.prashantsolanki3:Secure-Pref-Manager:0.25'
     implementation 'org.glassfish:javax.annotation:10.0-b28'
     implementation 'com.google.zxing:core:3.4.1'
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
