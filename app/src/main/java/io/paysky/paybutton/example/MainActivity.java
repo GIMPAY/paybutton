@@ -70,8 +70,6 @@ public class MainActivity extends AppCompatActivity
         initializePaymentTypesSpinner();
         initializeAuthTypeSpinner();
 
-        setDefaultData();
-
         setupPayButton();
         setupSubscribedNotSubscribedView();
 
@@ -83,17 +81,6 @@ public class MainActivity extends AppCompatActivity
         logoImageView.setOnLongClickListener(this);
 
         setLanguageTextView();
-    }
-
-    private void setDefaultData() {
-        merchantIdEditText.setText("10442227306");
-        terminalIdEditText.setText("20734388");
-        currencyEditText.setText("952");
-        secureHashKeyEditText.setText("e87a15e7048f97da99d305db75e3241a");
-        spinner_type.setSelection(0);
-        //customerIdEditText.setText("ea4989d7-a09c-463c-b0fa-867847538b85");
-        amountEditText.setText("2000");
-        transactionRefNumberEditText.setText("144232");
     }
 
     private void initializeAuthTypeSpinner() {

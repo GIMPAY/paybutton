@@ -33,7 +33,6 @@ import io.paysky.util.AppUtils;
 import io.paysky.util.ContaclessInterface;
 import io.paysky.util.DialogUtils;
 import io.paysky.util.LocaleHelper;
-import io.paysky.util.PrefsUtils;
 import io.paysky.util.TransactionManager;
 import me.grantland.widget.AutofitHelper;
 
@@ -69,7 +68,6 @@ public class PaymentActivity extends BaseActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        PrefsUtils.initialize(this);
         LocaleHelper.setLocale(this, LocaleHelper.getLocale());
         makeActivityFullScreen();
         if(!BuildConfig.DEBUG) {
