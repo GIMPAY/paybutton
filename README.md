@@ -1,6 +1,4 @@
-
-<p align="center"><a href="https://paysky.io/" target="_blank"><img width="440" src="https://paysky.io/wp-content/uploads/2023/12/Paysky-logo.png"></a></p>
-
+<p align="center"><a href="https://paysky.io/" target="_blank"><img width="440" src="https://i.ibb.co/0FTNnDb/83ac8f45c38ae9af0b22cfaace84c18362b95a8e7db0622f196a78b85f23ecec.png"></a></p>
 
 
 # GIM PayButton SDK 
@@ -28,7 +26,7 @@ maven { url 'https://jitpack.io' }
 ```
 3. In your build.gradle file in app level in dependencies{} add
 ```
-implementation 'com.github.gimpay:paybutton-sdk-android:1.0.0'
+implementation 'com.github.GIMPAY:paybutton:0.1.8'
 ```
 4. Sync your project.
 
